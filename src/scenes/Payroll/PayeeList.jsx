@@ -30,7 +30,7 @@ const PayeeList = () => {
 
     const fetchPayees = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/payees');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/payees');
             const payeesWithId = response.data.map((payee, index) => ({
                 ...payee,
                 id: payee._id || index,  // Fallback to index if _id is missing
@@ -57,7 +57,7 @@ const PayeeList = () => {
 
     const handleDeleteClick = async (id) => {
         try {
-            await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/payees/${id}`);
+            await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/payees/${id}`);
             setReFetch(!reFetch);
             toast.success("Payee deleted successfully");
         } catch (error) {
@@ -80,10 +80,10 @@ const PayeeList = () => {
     const handleFormSubmit = async () => {
         try {
             if (editingPayee) {
-                await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/payees/${editingPayee._id}`, formData);
+                await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/payees/${editingPayee._id}`, formData);
                 toast.success("Payee updated successfully");
             } else {
-                await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/payees', formData);
+                await axios.post('https://murtaza011-abidipro.mdbgo.io/api/payees', formData);
                 toast.success("Payee created successfully");
             }
             fetchPayees();

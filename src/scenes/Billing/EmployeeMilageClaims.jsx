@@ -30,7 +30,7 @@ const MilageClaims = () => {
 
     try {
       const response = await axios.post(
-        "https://a-khuhro-abidipro.mdbgo.io/api/mileage-claims",
+        "https://murtaza011-abidipro.mdbgo.io/api/mileage-claims",
         formData
       );
       console.log("Claim added successfully:", response.data);

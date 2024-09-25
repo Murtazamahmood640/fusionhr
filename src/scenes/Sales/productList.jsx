@@ -36,7 +36,7 @@ const ProductList = () => {
     // Fetch products data from the server
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/products');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/products');
         console.log('Products response:', response.data);
 
         // Add a fallback for rows that don't have an _id
@@ -67,7 +67,7 @@ const ProductList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/products/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/products/${id}`);
       setProducts(products.filter((product) => product._id !== id));
     } catch (error) {
       console.error('Error deleting product:', error);
@@ -88,7 +88,7 @@ const ProductList = () => {
 
   const handleFormSubmit = async () => {
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/products/${selectedProduct._id}`, formData);
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/products/${selectedProduct._id}`, formData);
       setProducts(products.map((product) =>
         product._id === selectedProduct._id ? { ...product, ...formData } : product
       ));

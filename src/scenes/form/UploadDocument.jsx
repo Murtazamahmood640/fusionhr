@@ -19,7 +19,7 @@ const Doc = () => {
       formData.append('reason', values.reason);
       formData.append('file', values.file);
 
-      const res = await axios.post("https://a-khuhro-abidipro.mdbgo.io/api/document", formData);
+      const res = await axios.post("https://murtaza011-abidipro.mdbgo.io/api/document", formData);
       console.log(res);
       toast.success("File Uploaded!");
     } catch (error) {

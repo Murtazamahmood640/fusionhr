@@ -18,7 +18,7 @@ const Overview = () => {
   useEffect(() => {
     const fetchOverviewData = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/overview');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/overview');
         setOverviewData(response.data);
       } catch (error) {
         console.error('Error fetching overview data:', error);

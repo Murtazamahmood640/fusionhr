@@ -42,7 +42,7 @@ const MileageClaimsList = () => {
     // Fetch mileage claims data from the server
     const fetchMileageClaims = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/mileage-claims');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/mileage-claims');
   
         // Ensure that each row has a unique 'id' property
         const claimsWithId = response.data.map((claim, index) => ({
@@ -68,7 +68,7 @@ const MileageClaimsList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/mileage-claims/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/mileage-claims/${id}`);
       setMileageClaims(mileageClaims.filter((claim) => claim._id !== id));
     } catch (error) {
       console.error('Error deleting mileage claim:', error);
@@ -89,7 +89,7 @@ const MileageClaimsList = () => {
 
   const handleFormSubmit = async () => {
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/mileage-claims/${selectedClaim._id}`, formData);
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/mileage-claims/${selectedClaim._id}`, formData);
       setMileageClaims(mileageClaims.map((claim) => (claim._id === selectedClaim._id ? formData : claim)));
       handleCloseDialog();
     } catch (error) {

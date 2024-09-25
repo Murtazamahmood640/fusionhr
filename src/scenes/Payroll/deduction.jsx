@@ -18,7 +18,7 @@ const Deductions = () => {
 
     const fetchDeductions = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/payments');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/payments');
             const filteredDeductions = response.data.filter(payment => payment.deductions && payment.deductions > 0);
             setDeductions(filteredDeductions);
         } catch (error) {

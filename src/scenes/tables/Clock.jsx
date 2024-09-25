@@ -103,7 +103,7 @@ const Clock = () => {
         totalTime: formatTime(totalTime),
         email: localStorage.getItem('email')
       };
-      axios.post("https://a-khuhro-abidipro.mdbgo.io/api/timeEntries", newEntry)
+      axios.post("https://murtaza011-abidipro.mdbgo.io/api/timeEntries", newEntry)
         .then((res) => {
           getEntries();
         })
@@ -125,7 +125,7 @@ const Clock = () => {
 
   const getEntries = async () => {
     try {
-      const res = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeEntries', {
+      const res = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeEntries', {
         params: {
           email: localStorage.getItem('email')
         }

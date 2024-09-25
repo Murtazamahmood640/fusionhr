@@ -31,7 +31,7 @@ const CreateMilestone = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const { data } = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/projects");
+        const { data } = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/projects");
         setProjects(data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -46,7 +46,7 @@ const CreateMilestone = () => {
       const fetchProjectDetails = async () => {
         try {
           const { data } = await axios.get(
-            `https://a-khuhro-abidipro.mdbgo.io/api/projects/${selectedProject}`
+            `https://murtaza011-abidipro.mdbgo.io/api/projects/${selectedProject}`
           );
           setProjectMilestones(data.milestones || []);
           // Fetch assignedMembers with their IDs
@@ -71,7 +71,7 @@ const CreateMilestone = () => {
         description: values.description,
       };
 
-      await axios.post("https://a-khuhro-abidipro.mdbgo.io/api/milestones", formData);
+      await axios.post("https://murtaza011-abidipro.mdbgo.io/api/milestones", formData);
       alert("Milestone created successfully!");
     } catch (error) {
       console.error(

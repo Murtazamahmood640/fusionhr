@@ -37,7 +37,7 @@ const MilestonesList = () => {
   useEffect(() => {
     const fetchMilestones = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/milestones');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/milestones');
         const milestonesData = response.data.map((milestone, index) => ({
           ...milestone,
           id: milestone._id || index, // Ensure every row has a unique `id`
@@ -72,7 +72,7 @@ const MilestonesList = () => {
   const handleDelete = async (id) => {
     console.log('Milestone ID to delete:', id); // Check if ID is properly passed
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/milestones/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/milestones/${id}`);
       setMilestones(milestones.filter((milestone) => milestone._id !== id));
     } catch (error) {
       console.error('Error deleting milestone:', error);
@@ -96,7 +96,7 @@ const MilestonesList = () => {
     }
   
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/milestones/${selectedMilestone._id}`, formData);
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/milestones/${selectedMilestone._id}`, formData);
       setMilestones(milestones.map((milestone) => 
         milestone._id === selectedMilestone._id ? { ...formData, _id: selectedMilestone._id } : milestone
       ));

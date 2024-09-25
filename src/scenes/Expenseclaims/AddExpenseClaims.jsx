@@ -27,7 +27,7 @@ const ExpenseClaims = () => {
         };
     
         try {
-          const response = await axios.post("https://a-khuhro-abidipro.mdbgo.io/api/expense-claims", formData);
+          const response = await axios.post("https://murtaza011-abidipro.mdbgo.io/api/expense-claims", formData);
           console.log("Claim added successfully:", response.data);
           toast.success("Claim added successfully");
         } catch (error) {

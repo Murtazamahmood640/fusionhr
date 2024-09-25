@@ -26,7 +26,7 @@ const ViewClaims = () => {
     });
     const fetchClaims = async () => {
         try {
-            const response = await fetch('https://a-khuhro-abidipro.mdbgo.io/api/mileage-claims');
+            const response = await fetch('https://murtaza011-abidipro.mdbgo.io/api/mileage-claims');
 
             // Check if the response content-type is JSON
             if (response.headers.get('content-type')?.includes('application/json')) {
@@ -84,10 +84,10 @@ const ViewClaims = () => {
     const handleFormSubmit = async () => {
         try {
             if (editingClaim) {
-                await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/expense-claims/${editingClaim._id}`, formData);
+                await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/expense-claims/${editingClaim._id}`, formData);
                 toast.success("Expense claim updated successfully");
             } else {
-                await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/expense-claims', formData);
+                await axios.post('https://murtaza011-abidipro.mdbgo.io/api/expense-claims', formData);
                 toast.success("Expense claim created successfully");
             }
             fetchClaims();
@@ -103,7 +103,7 @@ const ViewClaims = () => {
 
     const handleDeleteClick = async (id) => {
         try {
-            await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/expense-claims/${id}`);
+            await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/expense-claims/${id}`);
             setClaims(claims.filter((claim) => claim._id !== id));
             toast.success("Expense claim deleted successfully");
         } catch (error) {

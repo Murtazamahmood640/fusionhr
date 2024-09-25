@@ -36,7 +36,7 @@ const TimeoffApp = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeoff');
+        const { data } = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeoff');
         setProjects(data);
       } catch (error) {
         console.error('Error fetching data: ', error);
@@ -52,11 +52,11 @@ const TimeoffApp = () => {
 
   const handleApprove = async (id, reason, off_date, end_date, email, name) => {
     try {
-      const res = await axios.post("https://a-khuhro-abidipro.mdbgo.io/api/timeoff/approve", { id });
+      const res = await axios.post("https://murtaza011-abidipro.mdbgo.io/api/timeoff/approve", { id });
   
       alert(res.data.message);
   
-      await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/timeoff/mail", {
+      await axios.get("https://murtaza011-abidipro.mdbgo.io/api/timeoff/mail", {
         params: {
           email,
           reason,
@@ -94,12 +94,12 @@ const TimeoffApp = () => {
 
     try {
       if (editingIndex !== null) {
-        const updatedProject = await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/timeoff/${projects[editingIndex]._id}`, formData);
+        const updatedProject = await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/timeoff/${projects[editingIndex]._id}`, formData);
         const updatedProjects = [...projects];
         updatedProjects[editingIndex] = updatedProject.data;
         setProjects(updatedProjects);
       } else {
-        const newProject = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/timeoff', formData);
+        const newProject = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/timeoff', formData);
         setProjects([...projects, newProject.data]);
       }
       setPopupOpen(false);

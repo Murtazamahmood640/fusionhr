@@ -34,7 +34,7 @@ const ListofInvoices = () => {
 
   const fetchInvoices = async () => {
     try {
-      const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/invoices");
+      const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/invoices");
       console.log("Invoices Data:", response);
       const invoicesData = response.data.map((invoice, index) => ({
         ...invoice,
@@ -107,7 +107,7 @@ const ListofInvoices = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/invoices/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/invoices/${id}`);
       toast.success("Invoice deleted successfully");
       fetchInvoices();
     } catch (error) {

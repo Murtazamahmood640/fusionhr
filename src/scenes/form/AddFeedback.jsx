@@ -105,7 +105,7 @@ const Feedback = () => {
  
     try {
       console.log("Submitting feedback:", payload); // Log payload
-      const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/feedback', payload, {
+      const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/feedback', payload, {
         headers: {
           'Content-Type': 'application/json'
         }

@@ -42,7 +42,7 @@ const AddBill = () => {
   // Form submit handler
   const handleFormSubmit = async (values) => {
     try {
-      await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/bills', values);
+      await axios.post('https://murtaza011-abidipro.mdbgo.io/api/bills', values);
       toast.success('Bill added successfully');
       navigate('/billing/viewbills'); // Redirect to the List of Bills
     } catch (error) {

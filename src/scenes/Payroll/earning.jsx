@@ -18,7 +18,7 @@ const Earnings = () => {
 
     const fetchEarnings = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/payments');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/payments');
             const earningsData = response.data.filter(payment => payment.bonuses && payment.bonuses > 0);
             setEarnings(earningsData);
         } catch (error) {

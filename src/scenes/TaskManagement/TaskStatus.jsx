@@ -15,7 +15,7 @@ const TaskStatus = () => {
     // Fetch tasks assigned by the current user (assigner)
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/tasks-assigned', {
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/tasks-assigned', {
           params: { assignedBy: currentUser.name },
         });
         setTasks(response.data);

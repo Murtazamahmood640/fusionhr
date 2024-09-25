@@ -37,7 +37,7 @@ const VendorList = () => {
 
     const fetchVendors = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/vendors');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/vendors');
             
             // Ensure each vendor has an 'id' field (use '_id' if available, else fallback to index)
             const vendorsWithIds = response.data.map((vendor, index) => ({
@@ -59,7 +59,7 @@ const VendorList = () => {
 
     const handleDeleteClick = async (id) => {
         try {
-            await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/vendors/${id}`);
+            await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/vendors/${id}`);
             setReFetch(!reFetch);
             toast.success("Vendor deleted successfully");
         } catch (error) {
@@ -91,10 +91,10 @@ const VendorList = () => {
 
         try {
             if (editingVendor) {
-                await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/vendors/${editingVendor._id}`, formData);
+                await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/vendors/${editingVendor._id}`, formData);
                 toast.success("Vendor updated successfully");
             } else {
-                await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/vendors', formData);
+                await axios.post('https://murtaza011-abidipro.mdbgo.io/api/vendors', formData);
                 toast.success("Vendor created successfully");
             }
             fetchVendors();

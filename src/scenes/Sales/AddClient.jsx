@@ -30,7 +30,7 @@ const AddClient = () => {
 
     try {
       console.log('Form submission started'); // Log when the submission starts
-      const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/clients', values);
+      const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/clients', values);
       console.log('Form submitted successfully:', response.data); // Log the response from the server
       toast.success('Client added successfully');
       resetForm(); // Reset the form after successful submission

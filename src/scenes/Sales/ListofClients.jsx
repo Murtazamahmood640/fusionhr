@@ -37,7 +37,7 @@ const ClientsList = () => {
     // Fetch clients data from the server
     const fetchClients = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/clients');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/clients');
         const clientsData = response.data.map((client, index) => ({
           ...client,
           id: client._id || index, // Ensure every row has a unique `id`
@@ -59,7 +59,7 @@ const ClientsList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/clients/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/clients/${id}`);
       setClients(clients.filter((client) => client._id !== id));
     } catch (error) {
       console.error('Error deleting client:', error);
@@ -80,7 +80,7 @@ const ClientsList = () => {
 
   const handleFormSubmit = async () => {
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/clients/${selectedClient._id}`, formData);
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/clients/${selectedClient._id}`, formData);
       setClients(clients.map((client) => (client._id === selectedClient._id ? formData : client)));
       handleCloseDialog();
     } catch (error) {

@@ -16,7 +16,7 @@ const AddExpenses = () => {
     useEffect(() => {
         const fetchVendors = async () => {
             try {
-                const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/vendors");
+                const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/vendors");
                 console.log("Vendors Data:", response.data);  // Log the API response
                 if (Array.isArray(response.data)) {
                     setVendors(response.data);  // Ensure it's an array before setting
@@ -48,7 +48,7 @@ const AddExpenses = () => {
 
         try {
             const response = await axios.post(
-                "https://a-khuhro-abidipro.mdbgo.io/api/expenses",
+                "https://murtaza011-abidipro.mdbgo.io/api/expenses",
                 formData
             );
             console.log("Expense added successfully:", response.data);

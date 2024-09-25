@@ -16,7 +16,7 @@ const MyTasks = () => {
     // Fetch tasks assigned to the logged-in user
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/tasks-assigned', {
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/tasks-assigned', {
           params: { assignedTo: currentUser.name },
         });
         setTasks(response.data);
@@ -30,7 +30,7 @@ const MyTasks = () => {
 
   const handleStatusChange = async (taskId) => {
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/tasks-assigned/${taskId}`, {
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/tasks-assigned/${taskId}`, {
         taskStatus: 'Complete',
       });
       toast.success('Task status updated successfully');

@@ -18,7 +18,7 @@ const PaymentList = () => {
 
     const fetchPayments = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/payments');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/payments');
             console.log("Payments Data: ", response.data); // Log the response data
             // Ensure each payment has a unique id, use array index as fallback if `_id` is missing
             const paymentsWithId = response.data.map((payment, index) => ({

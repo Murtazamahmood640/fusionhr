@@ -18,9 +18,9 @@ const TimeoffReq = () => {
  
   const getManagerEmail = async (userEmail, setManagersEmail) => {
     try {
-const userResponse = await axios.get(`https://a-khuhro-abidipro.mdbgo.io/api/users/findByEmail`, { params: { email: userEmail } });
+const userResponse = await axios.get(`https://murtaza011-abidipro.mdbgo.io/api/users/findByEmail`, { params: { email: userEmail } });
       const userData = userResponse.data.reportTo;
-const managerResponse = await axios.get(`https://a-khuhro-abidipro.mdbgo.io/api/users/userName`, { params: { userName: userData } });
+const managerResponse = await axios.get(`https://murtaza011-abidipro.mdbgo.io/api/users/userName`, { params: { userName: userData } });
       const managerData = managerResponse.data;
 setManagersEmail(managerData.email);
     } catch (error) {
@@ -32,7 +32,7 @@ setManagersEmail(managerData.email);
   const notifyManagerOfTimeOffRequest = async (requestData) => {
     const { managerEmail, employeeName, startDate, endDate, reason } = requestData;
     try {
-const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeoff/notify-manager', {
+const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeoff/notify-manager', {
         params: { managerEmail, employeeName, startDate, endDate, reason }
       });
       return response.status === 200;
@@ -46,7 +46,7 @@ const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeoff
     const email = localStorage.getItem('email');
     const fetchData = async () => {
       try {
-const { data } = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeoff', { params: { email } });
+const { data } = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeoff', { params: { email } });
         setProjects(data);
       } catch (error) {
         console.error('Error fetching data: ', error);
@@ -76,13 +76,13 @@ const { data } = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeoff
       });
   
       if (editingIndex !== null) {
-        const updatedProject = await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/timeoff/${projects[editingIndex]._id}`, formData);
+        const updatedProject = await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/timeoff/${projects[editingIndex]._id}`, formData);
         const updatedProjects = [...projects];
         updatedProjects[editingIndex] = updatedProject.data;
         setProjects(updatedProjects);
         toast.success('Time Off Request updated successfully');
       } else {
-        const newProject = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/timeoff', formData);
+        const newProject = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/timeoff', formData);
         setProjects([...projects, newProject.data]);
         toast.success('Time Off Request created successfully');
       }

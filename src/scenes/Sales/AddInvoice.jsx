@@ -32,7 +32,7 @@ const AddInvoice = () => {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/clients");
+      const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/clients");
       if (Array.isArray(response.data)) {
         const clientNames = response.data.map(client => ({
           name: client.clientName,
@@ -50,7 +50,7 @@ const AddInvoice = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/products");
+      const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/products");
       if (Array.isArray(response.data)) {
         setProducts(response.data);
       } else {
@@ -67,7 +67,7 @@ const AddInvoice = () => {
   
     try {
       console.log('Invoice submission started'); // Log when the submission starts
-      const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/invoices', values);
+      const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/invoices', values);
       console.log('Invoice submitted successfully:', response.data); // Log the response from the server
       toast.success('Invoice created successfully');
       resetForm(); // Reset the form after successful submission

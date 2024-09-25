@@ -30,7 +30,7 @@ const AddProduct = () => {
   // Form submit handler
   const handleFormSubmit = async (values) => {
     try {
-      await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/products', values);
+      await axios.post('https://murtaza011-abidipro.mdbgo.io/api/products', values);
       toast.success('Product added successfully');
       window.location.href = '/sales/viewproduct'; // Redirect to the List of Products
     } catch (error) {

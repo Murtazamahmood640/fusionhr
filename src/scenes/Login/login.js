@@ -29,17 +29,17 @@ const Login = () => {
         setLoading(true); // Start loading
 
         try {
-            const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/users/login', { email, password });
+            const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/users/login', { email, password });
             console.log("data", response.data)
             localStorage.setItem('userId', response.data.userId);
             localStorage.setItem('email', response.data.email);
             localStorage.setItem("data", JSON.stringify(response.data))
 
-            const name = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/getName', { params: { email: email } });
+            const name = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/getName', { params: { email: email } });
             localStorage.setItem('name', JSON.stringify(response.data));
             localStorage.setItem("login", "login");
             // Fetch the logged-in user's data from /getUser
-            const getUser = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/getUser');
+            const getUser = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/getUser');
             console.log("getUser", getUser)
             const loggedInUser = getUser.data.find(user => user.personalEmail === response.data.email); // Match the logged-in user by email
            localStorage.setItem("loggedInUser" , JSON.stringify(loggedInUser))

@@ -32,7 +32,7 @@ const AddPayee = () => {
 
         try {
             const response = await axios.post(
-                "https://a-khuhro-abidipro.mdbgo.io/api/payees",
+                "https://murtaza011-abidipro.mdbgo.io/api/payees",
                 formData
             );
             console.log("Payee added successfully:", response.data);

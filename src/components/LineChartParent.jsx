@@ -15,7 +15,7 @@ const LineChartParent = () => {
       };
       const getEntries = async () => {
         try {
-          const res = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeEntries', {
+          const res = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeEntries', {
             params: {
               email: localStorage.getItem('email')
             }

@@ -30,7 +30,7 @@ const AddVendor = () => {
 
         try {
             const response = await axios.post(
-                "https://a-khuhro-abidipro.mdbgo.io/api/vendors",
+                "https://murtaza011-abidipro.mdbgo.io/api/vendors",
                 formData
             );
             console.log("Vendor added successfully:", response.data);

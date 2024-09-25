@@ -24,7 +24,7 @@ const PayrollDashboard = () => {
   useEffect(() => {
     const fetchOverview = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/payroll/overview');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/payroll/overview');
         setOverview(response.data);
       } catch (error) {
         console.error('Error fetching payroll overview:', error);

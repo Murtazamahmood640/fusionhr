@@ -27,7 +27,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const response = await axios.post(`https://a-khuhro-abidipro.mdbgo.io/api/reset-password/${token}`, { password });
+      const response = await axios.post(`https://murtaza011-abidipro.mdbgo.io/api/reset-password/${token}`, { password });
 
       // Check if the response message is about using the same password
       if (response.data.message === 'New password cannot be the same as the old password') {

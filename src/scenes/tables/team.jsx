@@ -21,7 +21,7 @@ const Team = ({ setEmployeeCount }) => {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/getUser');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/getUser');
         const data = response.data.map((user, index) => ({
           ...user,
           id: user._id || index, // Ensure every row has a unique `id`

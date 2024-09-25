@@ -72,7 +72,7 @@ const Account = () => {
   useEffect(() => {
     const userId = localStorage.getItem("userId");
     axios
-      .get(`https://a-khuhro-abidipro.mdbgo.io/api/users/user/${userId}`)
+      .get(`https://murtaza011-abidipro.mdbgo.io/api/users/user/${userId}`)
       .then((response) => {
         const userData = response.data;
         setFormData({

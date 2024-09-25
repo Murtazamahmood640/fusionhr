@@ -23,7 +23,7 @@ const Calendar = () => {
 
   const getEntries = async () => {
     try {
-      const res = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/timeEntries', {
+      const res = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/timeEntries', {
         params: {
           email: localStorage.getItem('email')
         }
@@ -82,7 +82,7 @@ const Calendar = () => {
       });
   
       try {
-        await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/scheduleEvent/sendMail', {
+        await axios.post('https://murtaza011-abidipro.mdbgo.io/api/scheduleEvent/sendMail', {
           email,
           subject: 'Event Reminder',
           message: `Your event "${title}" is scheduled for ${startTime}.`,

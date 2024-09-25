@@ -31,7 +31,7 @@ const CreateProject = () => {
     const getAllUsers = async () => {
       try {
         const { data } = await axios.get(
-          "https://a-khuhro-abidipro.mdbgo.io/api/getUser"
+          "https://murtaza011-abidipro.mdbgo.io/api/getUser"
         );
         const userNames = data.map((user) => user.name); // Extract only names
         setUsers(userNames);
@@ -43,7 +43,7 @@ const CreateProject = () => {
     const getAllClients = async () => {
       try {
         const { data } = await axios.get(
-          "https://a-khuhro-abidipro.mdbgo.io/api/clients" // Assuming an endpoint for clients
+          "https://murtaza011-abidipro.mdbgo.io/api/clients" // Assuming an endpoint for clients
         );
         const clientNames = data.map((client) => client.name);
         setClients(clientNames);

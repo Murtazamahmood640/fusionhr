@@ -29,7 +29,7 @@ const CreateProject = () => {
     const getAllUsers = async () => {
       try {
         const { data } = await axios.get(
-          "https://a-khuhro-abidipro.mdbgo.io/api/getUser"
+          "https://murtaza011-abidipro.mdbgo.io/api/getUser"
         );
         const userNames = data.map((user) => user.name); // Extract only names
         setUsers(userNames);
@@ -53,13 +53,13 @@ const CreateProject = () => {
     try {
       if (values._id) {
         await axios.put(
-          `https://a-khuhro-abidipro.mdbgo.io/api/projects/${values._id}`,
+          `https://murtaza011-abidipro.mdbgo.io/api/projects/${values._id}`,
           formData
         );
         toast.success("Project updated successfully");
       } else {
         await axios.post(
-          "https://a-khuhro-abidipro.mdbgo.io/api/projects",
+          "https://murtaza011-abidipro.mdbgo.io/api/projects",
           formData
         );
         toast.success("Project added successfully");

@@ -20,7 +20,7 @@ const TaskCalendar = () => {
     const fetchTasks = async () => {
       try {
         const currentUser = JSON.parse(localStorage.getItem('name')); // Assuming the user's name is stored in localStorage
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/tasks-assigned', {
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/tasks-assigned', {
           params: { assignedTo: currentUser.name }, // Send the required parameter
         });
         if (response.data && Array.isArray(response.data)) {

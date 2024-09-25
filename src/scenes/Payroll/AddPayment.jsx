@@ -24,7 +24,7 @@ const AddPayment = () => {
         // Fetch the list of payees from the backend
         const fetchPayees = async () => {
             try {
-                const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/payees");
+                const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/payees");
                 console.log("Payees Data:", response.data); // Log the API response
                 if (Array.isArray(response.data)) {
                     setPayees(response.data);  // Ensure it's an array before setting
@@ -53,7 +53,7 @@ const AddPayment = () => {
         console.log("Form Data: ", formData);
         try {
             const response = await axios.post(
-                "https://a-khuhro-abidipro.mdbgo.io/api/payments",
+                "https://murtaza011-abidipro.mdbgo.io/api/payments",
                 formData
             );
             console.log("Payment added successfully:", response.data);

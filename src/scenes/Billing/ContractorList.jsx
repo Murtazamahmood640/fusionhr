@@ -38,7 +38,7 @@ const ContractorList = () => {
 
   const fetchContractors = async () => {
     try {
-      const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/contractors');
+      const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/contractors');
   
       // Ensure every row has an `id` by using `_id` if available, or falling back to the index
       const contractorsWithIds = response.data.map((contractor, index) => ({
@@ -61,7 +61,7 @@ const ContractorList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/contractors/${id}`);
+      await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/contractors/${id}`);
       setContractors(contractors.filter((contractor) => contractor._id !== id));
       toast.success('Contractor deleted successfully');
     } catch (error) {
@@ -84,13 +84,13 @@ const ContractorList = () => {
   const handleFormSubmit = async () => {
     try {
       if (editingContractor) {
-        await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/contractors/${editingContractor._id}`, formData);
+        await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/contractors/${editingContractor._id}`, formData);
         setContractors(contractors.map((contractor) =>
           contractor._id === editingContractor._id ? formData : contractor
         ));
         toast.success('Contractor updated successfully');
       } else {
-        await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/contractors', formData);
+        await axios.post('https://murtaza011-abidipro.mdbgo.io/api/contractors', formData);
         toast.success('Contractor created successfully');
       }
       fetchContractors();

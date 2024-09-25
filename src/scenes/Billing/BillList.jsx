@@ -29,7 +29,7 @@ const BillList = () => {
     // Fetch bills from backend
     const fetchBills = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/bills');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/bills');
             
             // Ensure each bill has an 'id' field, fallback to index if '_id' is missing
             const billsWithIds = response.data.map((bill, index) => ({
@@ -76,11 +76,11 @@ const BillList = () => {
         try {
             if (editingBill) {
                 // Update bill
-                await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/bills/${editingBill._id}`, formData);
+                await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/bills/${editingBill._id}`, formData);
                 toast.success("Bill updated successfully");
             } else {
                 // Create new bill
-                await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/bills', formData);
+                await axios.post('https://murtaza011-abidipro.mdbgo.io/api/bills', formData);
                 toast.success("Bill created successfully");
             }
             fetchBills(); // Refresh bill list
@@ -107,7 +107,7 @@ const BillList = () => {
     // Handle click for deleting a bill
     const handleDeleteClick = async (id) => {
         try {
-            await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/bills/${id}`);
+            await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/bills/${id}`);
             setBills(bills.filter((bill) => bill._id !== id)); // Optimistically remove from state
             toast.success("Bill deleted successfully");
         } catch (error) {

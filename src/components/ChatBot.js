@@ -20,7 +20,7 @@ const Chatbot = () => {
       setMessages([...messages, { text: input, sender: 'user' }]);
 
       try {
-        const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/chatbot', {
+        const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/chatbot', {
           message: input,
         });
         console.log('Response from server:', response.data);

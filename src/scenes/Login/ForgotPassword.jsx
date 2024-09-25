@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/forgot-password', { email });
+      const response = await axios.post('https://murtaza011-abidipro.mdbgo.io/api/forgot-password', { email });
       alert(response.data.message);
     } catch (error) {
       console.error(error);

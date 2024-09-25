@@ -18,7 +18,7 @@ const ProjectOverview = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/project-overview');
+        const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/project-overview');
         console.log('API Response:', response.data); // Log API response to verify
         setDashboardData(response.data);
       } catch (error) {

@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   const fetchEmployeeData = async () => {
     try {
-      const response = await axios.get("https://a-khuhro-abidipro.mdbgo.io/api/EmployeesPayroll");
+      const response = await axios.get("https://murtaza011-abidipro.mdbgo.io/api/EmployeesPayroll");
       const totalBasicSalary = response.data.reduce((acc, employee) => acc + (employee.basicSalary || 0), 0);
       setTotalExpenses(totalBasicSalary);
       setEmployeeCount(response.data.length);
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const fetchProjectCount = async () => {
     try {
-      const response = await axios.get("https://a-khuhro-abidipro.mdbgo.ioapi/project/count");
+      const response = await axios.get("https://murtaza011-abidipro.mdbgo.ioapi/project/count");
       setProjectCount(response.data.count);
     } catch (err) {
       console.log("Error fetching project count:", err);
@@ -53,7 +53,7 @@ const Dashboard = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/my-tasks', {
+      const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/my-tasks', {
         params: { name: localStorage.getItem("name") },
       });
       const taskData = response.data;

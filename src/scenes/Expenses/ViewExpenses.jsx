@@ -22,7 +22,7 @@ const ViewExpenses= () => {
 
     const fetchExpenses = async () => {
         try {
-            const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/expenses');
+            const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/expenses');
             console.log("response" , response)
             const expensesWithIds = response.data.map((expense, index) => ({
                 ...expense,
@@ -41,7 +41,7 @@ const ViewExpenses= () => {
 
     const handleDeleteClick = async (id) => {
         try {
-            await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/expenses/${id}`);
+            await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/expenses/${id}`);
             setReFetch(!reFetch);
             toast.success("Expense deleted successfully");
         } catch (error) {
@@ -69,10 +69,10 @@ const ViewExpenses= () => {
 
         try {
             if (editingExpense) {
-                await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/expenses/${editingExpense._id}`, formData);
+                await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/expenses/${editingExpense._id}`, formData);
                 toast.success("Expense updated successfully");
             } else {
-                await axios.post('https://a-khuhro-abidipro.mdbgo.io/api/expenses', formData);
+                await axios.post('https://murtaza011-abidipro.mdbgo.io/api/expenses', formData);
                 toast.success("Expense created successfully");
             }
             fetchExpenses();

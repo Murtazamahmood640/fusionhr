@@ -33,10 +33,10 @@ const AssignTasks = () => {
     const fetchProjectsAndMembers = async () => {
       try {
         const [projectsResponse, membersResponse] = await Promise.all([
-          axios.get("https://a-khuhro-abidipro.mdbgo.io/api/project/created", {
+          axios.get("https://murtaza011-abidipro.mdbgo.io/api/project/created", {
             params: { name: currentUser.name },
           }),
-          axios.get("https://a-khuhro-abidipro.mdbgo.io/api/getUser"),
+          axios.get("https://murtaza011-abidipro.mdbgo.io/api/getUser"),
         ]);
 
         setProjects(projectsResponse.data);

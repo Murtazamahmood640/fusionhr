@@ -45,7 +45,7 @@ const ProjectList = () => {
   // Fetch projects from the backend
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('https://a-khuhro-abidipro.mdbgo.io/api/projects');
+      const response = await axios.get('https://murtaza011-abidipro.mdbgo.io/api/projects');
       setProjects(response.data);
       setFilteredProjects(response.data);
     } catch (error) {
@@ -73,7 +73,7 @@ const ProjectList = () => {
   const handleDeleteClick = async (id) => {
     if (window.confirm('Are you sure you want to delete this project?')) {
       try {
-        await axios.delete(`https://a-khuhro-abidipro.mdbgo.io/api/projects/${id}`);
+        await axios.delete(`https://murtaza011-abidipro.mdbgo.io/api/projects/${id}`);
         fetchProjects();
       } catch (error) {
         console.error('Error deleting project:', error);
@@ -127,7 +127,7 @@ const ProjectList = () => {
   // Handle Update Project submission
   const handleUpdateProject = async () => {
     try {
-      await axios.put(`https://a-khuhro-abidipro.mdbgo.io/api/projects/${selectedProject._id}`, selectedProject);
+      await axios.put(`https://murtaza011-abidipro.mdbgo.io/api/projects/${selectedProject._id}`, selectedProject);
       setOpenUpdateDialog(false);
       fetchProjects();
     } catch (error) {
