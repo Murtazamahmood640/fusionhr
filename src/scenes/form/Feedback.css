@@ -1,0 +1,10 @@
+.chart-container {
+    width: 30vw; /* 30% of the viewport width */
+    height: 30vh; /* 30% of the viewport height */
+    position: relative;
+  }
+ 
+.Char-size {
+    display: flex;
+    width: 100%; /* 30% of the viewport width */
+  }

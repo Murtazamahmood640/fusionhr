@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3311a0ac.css",
+    "main.js": "/static/js/main.3d154718.js",
+    "static/js/213.7c76443c.chunk.js": "/static/js/213.7c76443c.chunk.js",
+    "static/js/455.0d4668e8.chunk.js": "/static/js/455.0d4668e8.chunk.js",
+    "static/media/desert.jpg": "/static/media/desert.5d619790fa8a1f5081dc.jpg",
+    "static/media/watermark.png": "/static/media/watermark.f6f61545f33ed0ae98e3.png",
+    "index.html": "/index.html",
+    "main.3311a0ac.css.map": "/static/css/main.3311a0ac.css.map",
+    "main.3d154718.js.map": "/static/js/main.3d154718.js.map",
+    "213.7c76443c.chunk.js.map": "/static/js/213.7c76443c.chunk.js.map",
+    "455.0d4668e8.chunk.js.map": "/static/js/455.0d4668e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3311a0ac.css",
+    "static/js/main.3d154718.js"
+  ]
+}

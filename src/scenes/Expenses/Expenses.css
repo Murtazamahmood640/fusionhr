@@ -1,0 +1,46 @@
+/* Expense.css */
+.custom-textfield .MuiInputLabel-root {
+    color: black !important; /* Label color */
+}
+
+.custom-textfield .MuiInputBase-input {
+    color: black !important; /* Input value color */
+}
+
+.custom-textfield .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color */
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color on hover */
+}
+
+.custom-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color when focused */
+}
+/* Expenses.css */
+
+/* For the Select component */
+.custom-select {
+    width: 100%; /* Full width */
+}
+
+.custom-select .MuiInputLabel-root {
+    color: black !important; /* Label color */
+}
+
+.custom-select .MuiSelect-icon {
+    color: black !important; /* Dropdown icon color */
+}
+
+.custom-select .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color */
+}
+
+.custom-select .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color on hover */
+}
+
+.custom-select .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: black !important; /* Border color when focused */
+}
